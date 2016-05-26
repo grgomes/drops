@@ -35,7 +35,7 @@ Na página do projeto, vá até **Runners** e copie o token:
 * Execute o prompt de comando em modo administrativo
 * Execute os passos à seguir pelo prompt:
 
-```powershell
+```
 cd C:\gitlab-ci
 gitlab-ci-multi-runner register
 
@@ -55,7 +55,7 @@ shell
 
 Você pode instalar seu *runner* como um serviço do windows:
 
-```powershell
+```
 gitlab-ci-multi-runner install --user COLOQUE-SEU-USUÁRIO --password COLOQUE-SUA-SENHA
 gitlab-ci-multi-runner start
 ```
@@ -71,7 +71,7 @@ Para a execução de build de projetos .NET, utilizamos o [MSBuild](https://msdn
 
 Ex.: (http://stackoverflow.com/questions/32964953/gitlab-ci-and-msbuild-with-tests)
 
-```yml
+```
 before_script:
   - 'call "%VS120COMNTOOLS%\vsvars32.bat"'
   - '".\src\.nuget\NuGet.exe" restore ".\src\CwiDojo.sln"'
