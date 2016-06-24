@@ -67,7 +67,7 @@ Em todos os casos, as técnicas sempre consistem em fazer publicações em ambie
 
 # Executados a cada build na IC 
 
-Que uma suite bem estruturada de testes automatizados unitários e funcionais são a alma de um software de alta qualdiade e longevidade. já não se discute mais. Porém essa prática não sobrevive muito tempo quando não casada a IC.
+Que uma suite bem estruturada de testes automatizados unitários e funcionais são a alma de um software de alta qualidade e longevidade. já não se discute mais. Porém essa prática não sobrevive muito tempo quando não casada a IC.
 A medida que são adicionados mais e mais testes ao projeto sua execução começa a tomar algum tempo e seria insustentável manter a execução de todos eles manualmente para cada nova mexida no código. 
 
 Assim, essas duas técnicas ganham força uma com a outra: 
@@ -85,7 +85,7 @@ Seguindo a mesma lógica das funcionalidades, a performance precisa também ser 
 
 Outro importante passo a se considerar é o quanto as novas mudanças no sistema estão melhorando ou piorando o número de usuários e requisições que ele aguenta.
 Grandes players de sistemas online costumam ter um passo exlusivo da sua IC apenas para testes de carga, antes de liberar a nova versão para produção.
-Quando já se tem testes de performance criados para controlar os tempos de resposta das requisições, organizar o step da batria de teste de carga é apenas uma questão de estratégia de quando rodar e qual hardware/ambientes utilizar.
+Quando já se tem testes de performance criados para controlar os tempos de resposta das requisições, organizar o step da bateria de teste de carga é apenas uma questão de estratégia de quando rodar e qual hardware/ambientes utilizar.
 
 ## Segurança
 
