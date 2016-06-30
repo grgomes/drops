@@ -42,36 +42,36 @@ Convenções: para simplificarmos, utilizaremos um **Ubuntu 16.04**.
 
 Antes de começarmos a instalar efetivamente o ansible, vamos instalar as suas dependências.
 
-{% highlight bash %}
+```
 sudo apt-get install python-pip python-setuptools python-paramiko python-yaml python-jinja2 python-httplib2 python-six
-{% endhighlight %}
+```
 
 Geralmente as versões disponibilizadas em pacotes para o sistema operacional, estão desatualizadas quanto a repositório principal, então iremos instalar a partir do github do projeto.
 
-{% highlight bash %}
+```
 git clone https://github.com/ansible/ansible.git ~/ansible/ --recursive
 cd ~/ansible/
-{% endhighlight %}
+```
 
 Quando precisarmos atualizar a versão do ansible, basta executar:
 
-{% highlight bash %}
+```
 cd ~/ansible/
 git pull --rebase
 git submodule update --init --recursive
-{% endhighlight %}
+```
 
 Logo após instalarmos, devemos adicionar o setup do ansible no "~/.bashrc":
 
-{% highlight bash %}
+```
 echo "source ~/ansible/hacking/env-setup -q" >> ~/.bashrc
-{% endhighlight %}
+```
 
 Verificando a versão instalada:
 
-{% highlight bash %}
+```
 ansible --version
-{% endhighlight %}
+```
 
 Feito! Concluímos a nossa instalação.
 
@@ -116,101 +116,102 @@ Existem diversas configurações possíveis, para mais detalhes:
 
 [Documentação Oficial](http://docs.ansible.com/ansible/intro_inventory.html)
 
-{% highlight bash %}
+```
 touch ~/www_ansible/hosts
-{% endhighlight %}
+```
 
 Logo após criarmos o arquivo, vamos cadastrar nossa máquina local como o host candidato a **playbook**, adicionando o conteúdo ao arquivo:
 
-{% highlight yaml %}
+```
 [www]
 127.0.0.1 ansible_user=username ansible_ssh_pass=password ansible_become=yes
-{% endhighlight %}
+```
 
 Uma **playbook** no ansible é basicamente uma associação entre quais *roles* serão aplicadas em cada *host*:
 
 *playbook padrão, arquivo padrão que o ansible lê*
 
-{% highlight bash %}
+```
 touch ~/www_ansible/site.yml
-{% endhighlight %}
+```
 
 *playbook nginx, arquivo com mapeamentos customizados* 
 
-{% highlight bash %}
+```
 touch ~/www_ansible/nginx.yml
-{% endhighlight %}
+```
 
 No playbook padrão vamos incluir o playbook nginx, adicionando o seguinte conteúdo ao arquivo:
 
-{% highlight yaml %}
+```
 - include: nginx.yml
-{% endhighlight %}
+```
 
 No playbook nginx vamos definir para localhost a role nginx, adicionando o seguinte conteúdo ao arquivo:
 
-{% highlight yaml %}
+```
 - name: nginx playbook
   hosts: www
   roles:
     - nginx
-{% endhighlight %}
+```
 
 O arquivo padrão identificado dentro das pastas da estrutura da role é o **main.yml**, então vamos criar o arquivo dentro de cada pasta da nossa role:
-{% highlight bash %}
+
+```
 touch ~/www_ansible/roles/nginx/handlers/main.yml
 touch ~/www_ansible/roles/nginx/tasks/main.yml
 touch ~/www_ansible/roles/nginx/templates/main.yml
-{% endhighlight %}
+```
 
 Agora vamos criar nossa *task*, instalar o pacote do nginx, adicionando o seguinte conteúdo ao arquivo **~/www_ansible/roles/nginx/tasks/main.yml**:
 
-{% highlight yaml %}
+```
 - name: install nginx
   apt: name=nginx state=present
-{% endhighlight %}
+```
 
 Agora vamos criar nosso *handler* para o role nginx, a idéia aqui é construirmos facilitadores para os pacotes instalados na role, vejamos o exemplo de *reinicialização* do serviço, adicionando o seguinte conteúdo ao arquivo **~/www_ansible/roles/nginx/handlers/main.yml**:
 
-{% highlight yaml %}
+```
 - name: restart nginx
   service: name=nginx state=restarted enabled=yes
-{% endhighlight %}
+```
 
 Primeiro vamos criar o template padrão para o nginx:
 
-{% highlight bash %}
+```
 touch ~/www_ansible/roles/nginx/templates/default.conf
-{% endhighlight %}
+```
 
 Agora vamos aplicá-lo ao pacote instalado através de uma *task*, adicionando o seguinte conteúdo ao arquivo **~/www_ansible/roles/nginx/tasks/main.yml**:
 
-{% highlight yaml %}
+```
 - name: install nginx template
   template: src=default.conf dest=/etc/nginx/conf.d/default.conf
-{% endhighlight %}
+```
 
 Porém sabemos, que ao aplicar um template as configurações só serão absorvidas após o serviço ser reinicializado, então vamos adicionar este complemento a tarefa de instalação do template, adicionando o seguinte conteúdo ao arquivo **~/www_ansible/roles/nginx/tasks/main.yml**:
 
-{% highlight yaml %}
+```
   notify: restart nginx
-{% endhighlight %}
+```
 
 A estrutura da tarefa de instalação do template do nginx deverá ficar desta maneira:
 
-{% highlight yaml %}
+```
 - name: install nginx template
   template: src=default.conf dest=/etc/nginx/conf.d/default.conf
   notify: restart nginx
-{% endhighlight %}
+```
 
 Na anotação **notify** estamos nos referindo ao nome do **handler** que criamos, o mesmo irá reinicializar o serviço do nginx, aplicando o template.
 
 E agora podemos executar o nosso playbook, aplicando as mudanças ao nosso host:
 
-{% highlight bash %}
+```
   ansible-playbook -i hosts site.yml
-{% endhighlight %}
+```
 
 Os fontes deste post, estão [neste repositório](https://github.com/johnvoloski/nginx-with-ansible) no GitHub.
 
