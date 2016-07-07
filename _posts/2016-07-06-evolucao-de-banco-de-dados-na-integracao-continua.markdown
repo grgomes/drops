@@ -19,7 +19,7 @@ Normalmente as pessoas não incluem na integração continua as alterações no 
 
 O modelo tradicional de evolução do banco de dados requer que os arquivos com as instruções sejam executados de forma manual por um DBA em cada um dos ambientes. Quando este não tem exclusividade no projeto, ele pode se tornar um gargalo. Acredito que todos já ouviram a frase: <i>(Nesse momento não posso, estou vendo um problema em produção”</i>, sendo que é necessário apenas atualizar a base de teste integrado.
 
-A Datical em um [informe comercial]((http://www.datical.com/wp-content/uploads/White-Paper-The-ROI-of-Automating-Database-Deployments.pdf)), diz que 70% do tempo dos DBAs em uma grande corporação é gasto para aplicar instruções de atualização de banco decorrentes da evolução das aplicações. Desta forma, removendo ou simplificando esta tarefa há um ganho considerável de tempo e diminuição do custo, fazendo com que o DBA foque realmente naquilo em que ele é mais requisitado: manter o banco saudável e performático.
+A Datical em um [informe comercial](http://www.datical.com/wp-content/uploads/White-Paper-The-ROI-of-Automating-Database-Deployments.pdf), diz que 70% do tempo dos DBAs em uma grande corporação é gasto para aplicar instruções de atualização de banco decorrentes da evolução das aplicações. Desta forma, removendo ou simplificando esta tarefa há um ganho considerável de tempo e diminuição do custo, fazendo com que o DBA foque realmente naquilo em que ele é mais requisitado: manter o banco saudável e performático.
 
 Neste post vou comentar duas soluções OpenSource, o [Flyway](https://flywaydb.org) e o [Liquibase](http://www.liquibase.org) que podem ser utilizadas para integrar de forma simples e rápida a evolução do banco de dados juntamente com seu processo de integração continua. Pode parecer apenas um detalhe, mas leia algumas perguntas que separei abaixo. Se alguma das respostas for negativa ou não souber responder, é bem provável que seu processo seja extremamente lento, de custo elevado e sua base de dados está correndo muito mais riscos do que deveria.
 
@@ -73,7 +73,7 @@ A Datical possui uma ferramenta de integração continua exclusiva para o Liquib
 
 
 
-## Conclusão
+## Considerações Finais
 Automatizar o processo de evolução do banco de dados é algo muito simples e já traz benefícios no primeiro momento em que for utilizado. Porém é aconselhável uma fase de experimentação e estudo da ferramenta. Sua utilização adequada requer disciplina e organização, um changeset do Liquibase, por exemplo, uma vez aplicado não poderá ser modificado, se o for, a ferramenta não continua a execução dos próximos até que seja revertido.
 
 A utilização do rollback também requer cuidados, assim como na evolução, excluir tabelas ou colunas são procedimentos que não possuem procedimento de recuperação sem a utilização de algum backup.
