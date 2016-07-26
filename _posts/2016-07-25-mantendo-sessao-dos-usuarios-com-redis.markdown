@@ -31,6 +31,7 @@ Vamos construir uma aplicação com uma camada simples de segurança de exemplo,
 •	Java JDK 1.6
 •	Maven 3.0
 
+
 1)	Clonar o projeto https://github.com/eskeff/spring-redis;
 2)	Importar no Eclipse como Maven Project;
 3)	Executar a classe App.java;
@@ -60,16 +61,16 @@ Baixe  a versão do seu [Windows](https://docs.docker.com/docker-for-windows/)  
 
 Escolha sua distribuição [Linux](https://docs.docker.com/engine/installation/linux/)  e instale normalmente com as configurações padrão.
 
-Feito isso o comando “docker” já deve funcionar.
+Feito isso o comando `docker` já deve funcionar.
 
 Após, simplesmente rode o comando:
-“docker run --name meu-redis -d -p 6379:6379 redis redis-server” e espere alguns instantes, após finalizar rode o comando “docker ps”:
+`docker run --name meu-redis -d -p 6379:6379 redis redis-server` e espere alguns instantes, após finalizar rode o comando `docker ps`:
  
   ![image](https://github.com/eskeff/images/blob/master/3_docker.png)
 
 Com isso o Redis já está rodando na sua máquina, no meu caso no localhost na porta 6379.
 
-Execute “docker exec -it meu-redis redis-cli” para conseguirmos acessar o Redis:
+Execute `docker exec -it meu-redis redis-cli` para conseguirmos acessar o Redis:
 
   ![image](https://github.com/eskeff/images/blob/master/4_redis.png)
 
@@ -92,7 +93,7 @@ Agora basta rodar a aplicação novamente e após logar:
 
   ![image](https://github.com/eskeff/images/blob/master/2_hello.png)
  
- E então execute “Keys *” no Redis e deve parecer:
+ E então execute `Keys *` no Redis e deve parecer:
 
    ![image](https://github.com/eskeff/images/blob/master/6_redis.png)
  
@@ -112,7 +113,7 @@ E subi-la novamente e recarregar a página “http://localhost:8080/hello”:
  
 **E continuamos autenticados, SUCESSO!!!**
 
-Agora um último teste, vamos executar o comando “flushall” que removerá todos os registros no Redis:
+Agora um último teste, vamos executar o comando `flushall` que removerá todos os registros no Redis:
 
   ![image](https://github.com/eskeff/images/blob/master/8_redis.png)
  
@@ -127,9 +128,5 @@ E fomos redirecionados para a tela de login já que o Spring não tem mais a ses
 
 Com essa pequena aplicação conseguimos demonstrar que podemos salvar as sessões de forma externa, facilitando a implantação de deploys de baixo risco como Blue-Green Deployment.
 O próximo passo é utilizar o Redis em conjunto com o Redis Sentinel na configuração Master e Slave para garantirmos uma alta disponibilidade das sessões.
-Até a próxima.  
- 
- 
 
-
-
+Até a próxima.
