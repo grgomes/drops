@@ -39,19 +39,19 @@ Vamos construir uma aplicação com uma camada simples de segurança de exemplo,
 ```
 Feito, temos uma aplicação web com segurança rodando, acesse http://localhost:8080/hello e verá uma página parecida com essa:
 
- ![image](https://github.com/eskeff/images/blob/master/1_login.png)
+ ![image](https://github.com/eskeff/images/blob/master/1_login.png?raw=true)
 
  
 Acesse usando as credencias “user@123”, e terá acessado a página:
 
- ![image](https://github.com/eskeff/images/blob/master/2_hello.png)
+ ![image](https://github.com/eskeff/images/blob/master/2_hello.png?raw=true)
  
 Nesse ponto se derrubarmos o servidor de aplicação e subir novamente iremos perder a sessão, para que isso não ocorra vamos seguir com o Drops.
 
 # Instalar o Redis com Docker 
 
 O Redis pode ser facilmente instalado no [Windows](https://github.com/rgl/redis/downloads) ou [Linux](http://redis.io/topics/quickstart) 
-Mas para mantermos um padrão iremos utilizar o  [Docker](https://www.docker.com/) para facilitar nossas vidas .
+Mas para mantermos um padrão iremos utilizar o  [Docker](https://www.docker.com/) para facilitar nossas vidas :).
 
 **Windows**
 
@@ -66,13 +66,13 @@ Feito isso o comando `docker` já deve funcionar.
 Após, simplesmente rode o comando:
 `docker run --name meu-redis -d -p 6379:6379 redis redis-server` e espere alguns instantes, após finalizar rode o comando `docker ps`:
  
-  ![image](https://github.com/eskeff/images/blob/master/3_docker.png)
+  ![image](https://github.com/eskeff/images/blob/master/3_docker.png?raw=true)
 
 Com isso o Redis já está rodando na sua máquina, no meu caso no localhost na porta 6379.
 
 Execute `docker exec -it meu-redis redis-cli` para conseguirmos acessar o Redis:
 
-  ![image](https://github.com/eskeff/images/blob/master/4_redis.png)
+  ![image](https://github.com/eskeff/images/blob/master/4_redis.png?raw=true)
 
 # Voltando a aplicação  
 
@@ -87,15 +87,15 @@ Adicione a dependência no pom.xml:
 ```
 E retire todos os comentários da classe HttpSessionConfig.java:
  
-   ![image](https://github.com/eskeff/images/blob/master/5_eclipse.png)
+   ![image](https://github.com/eskeff/images/blob/master/5_eclipse.png?raw=true)
 
 Agora basta rodar a aplicação novamente e após logar:
 
-  ![image](https://github.com/eskeff/images/blob/master/2_hello.png)
+  ![image](https://github.com/eskeff/images/blob/master/2_hello.png?raw=true)
  
  E então execute `Keys *` no Redis e deve parecer:
 
-   ![image](https://github.com/eskeff/images/blob/master/6_redis.png)
+   ![image](https://github.com/eskeff/images/blob/master/6_redis.png?raw=true)
  
 Ok, a sessão está sendo armazenada no Redis
 
@@ -105,21 +105,21 @@ Ok, a sessão está sendo armazenada no Redis
 
 Agora podemos derrubar nossa aplicação:
  
-  ![image](https://github.com/eskeff/images/blob/master/7_fail.png)
+  ![image](https://github.com/eskeff/images/blob/master/7_fail.png?raw=true)
 
 E subi-la novamente e recarregar a página “http://localhost:8080/hello”:
   
-![image](https://github.com/eskeff/images/blob/master/2_hello.png)
+![image](https://github.com/eskeff/images/blob/master/2_hello.png?raw=true)
  
 **E continuamos autenticados, SUCESSO!!!**
 
 Agora um último teste, vamos executar o comando `flushall` que removerá todos os registros no Redis:
 
-  ![image](https://github.com/eskeff/images/blob/master/8_redis.png)
+  ![image](https://github.com/eskeff/images/blob/master/8_redis.png?raw=true)
  
 E tentar acessar a página http://localhost:8080/hello novamente:
 
-  ![image](https://github.com/eskeff/images/blob/master/1_login.png)
+  ![image](https://github.com/eskeff/images/blob/master/1_login.png?raw=true)
  
 E fomos redirecionados para a tela de login já que o Spring não tem mais a sessão anterior 
 
