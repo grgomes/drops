@@ -26,6 +26,7 @@ Em suma é um banco não relacional em memória, que pode ser usado como cache, 
 # Construindo uma aplicação de exemplo com Spring Boot
 
 Vamos construir uma aplicação com uma camada simples de segurança de exemplo, para isso precisaremos de:
+
 ```
 •	Uma IDE, no caso será utilizado Eclipse;
 •	Java JDK 1.6
@@ -37,6 +38,7 @@ Vamos construir uma aplicação com uma camada simples de segurança de exemplo,
 3)	Executar a classe App.java;
 
 ```
+
 Feito, temos uma aplicação web com segurança rodando, acesse http://localhost:8080/hello e verá uma página parecida com essa:
 
  ![image](https://github.com/eskeff/images/blob/master/1_login.png?raw=true)
@@ -78,12 +80,12 @@ Execute `docker exec -it meu-redis redis-cli` para conseguirmos acessar o Redis:
 
 Então vamos voltar para o nosso projeto.
 Adicione a dependência no pom.xml:
+
 ```
 <dependency>
      <groupId>org.springframework.boot</groupId>
      <artifactId>spring-boot-starter-redis</artifactId>       
 </dependency>
-
 ```
 E retire todos os comentários da classe HttpSessionConfig.java:
  
@@ -98,9 +100,6 @@ Agora basta rodar a aplicação novamente e após logar:
    ![image](https://github.com/eskeff/images/blob/master/6_redis.png?raw=true)
  
 Ok, a sessão está sendo armazenada no Redis
-
-
-
 
 
 Agora podemos derrubar nossa aplicação:
