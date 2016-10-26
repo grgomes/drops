@@ -36,5 +36,5 @@ Como o processo de implantação de funcionalidade nova no cliente pode levar al
 Com as novas soluções, é possível realizar a escrita de cenários no MTM, o que permite maior integração entre o desenvolvimento e o controle de qualidade e mantem as entregas como o cliente deseja.
 
 As ferramentas desenvolvidas (utilizando a linguagem C#) foram disponibilizadas no Git CWI, para que outras equipes possam utilizá-la e também contribuir com melhorias.
-- TFS2TFS: [http://git.cwi.com.br/jose.barbosa/TFS2TFS]http://git.cwi.com.br/jose.barbosa/TFS2TFS
-- TFS2Testlink: [http://git.cwi.com.br/jose.barbosa/TFS2Testlink]http://git.cwi.com.br/jose.barbosa/TFS2Testlink
+- [TFS2TFS](http://git.cwi.com.br/jose.barbosa/TFS2TFS)
+- [TFS2Testlink](http://git.cwi.com.br/jose.barbosa/TFS2Testlink)
