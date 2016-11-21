@@ -12,15 +12,15 @@ Assim:
 
 ![screen shot 2016-11-19 at 11 23 48 pm](https://cloud.githubusercontent.com/assets/4842605/20459783/9930e04a-aeb5-11e6-8fed-1ab2aa866d95.png)
 
-Vários serviços oferecem funcionalidade semelhante ([Pingdom](https://www.pingdom.com/), [Uptime Robot](https://uptimerobot.com/)), mas Cabot se diferencia por ser self-hosted, open-source e gratuito, então você não precisa se preocupar com constraints como um limite mínimo de intervalo, ou umm número máximo de aplicações que você possa monitorar.
+Vários serviços oferecem funcionalidade semelhante ([Pingdom](https://www.pingdom.com/), [Uptime Robot](https://uptimerobot.com/)), mas Cabot se diferencia por ser self-hosted, open-source e gratuito, então você não precisa se preocupar com constraints como um limite mínimo de intervalo, ou um número máximo de aplicações que você possa monitorar.
 
-Esse é um post básico que mostra como rodar e usar Cabot o mais rapidamente possível. Vou mostar apenas uma forma de fazer cada coisa.
+Esse é um post básico que mostra como rodar e usar Cabot o mais rápido possível. Vou mostar apenas uma forma de fazer cada coisa.
 
 ## Instalação
 
 Instale com Docker, usando [cabot-docker](https://github.com/shoonoise/cabot-docker):
 
-1. instalar docker + docker-compose.
+1. instale docker + docker-compose.
 
 1. `git clone https://github.com/shoonoise/cabot-docker.git`
 
@@ -28,7 +28,7 @@ Instale com Docker, usando [cabot-docker](https://github.com/shoonoise/cabot-doc
 
 1. `docker-compose up -d`
 
-O serviço deve subir na porta 8080 (altere no docker-compose.yml se quiser). As credenciais default são docker/docker.
+O serviço irá subir na porta 8080 (altere no docker-compose.yml se quiser). As credenciais default são docker/docker.
 
 ## Conceitos
 
@@ -40,7 +40,7 @@ O serviço deve subir na porta 8080 (altere no docker-compose.yml se quiser). As
 
 **Instance** é uma instância real de uma máquina (virtual ou física) que terá algum serviço rodando. Uma instância terá um IP/hostname.
 
-**Service** é a coisa mais macro que você quer monitorar.
+**Service** é a coisa mais macro que você quer monitorar. Funciona como um agregador de instâncias e checks.
 
 A documentação é bastante obscura sobre esses conceitos, então aqui está a minha opinião sobre como usá-los.
 
@@ -64,7 +64,7 @@ Atualmente vejo 2 opções para automatizar:
 
 - eu criei o [cabot-zombie](https://github.com/rafaeleyng/cabot-zombie), que roda um *headless browser* e configura Cabot baseado em um objeto Javascript contendo as configurações. Olhe o projeto para mais detalhes.
 
-- Acessar a instância Postgres que o Cabot usa e fazer alguns inserts diretamente, automatizando isso da forma que preferir. As tabelas envolvidas são:
+- acesse a instância Postgres que o Cabot usa e faça alguns inserts diretamente, automatizando isso da forma que preferir. As tabelas envolvidas são:
   - cabotapp_instance_status_checks
   - cabotapp_instance
   - cabotapp_instancestatussnapshot
