@@ -14,38 +14,38 @@ Definir um bom conjunto de classes, interfaces e métodos são um bom começo pa
 
 ### Simple Factory: 
 Encapsula o processo de criação de uma instância de um objeto.
-* [Simple Factory](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Simple Factory)
+ * [Simple Factory](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Simple Factory)
 
 ### Factory Method: 
 Define uma interface para criar um objeto, deixando a classe que implementa a interface decidir qual classe instanciar.
-* [Factory Method](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Factory Method)
+ * [Factory Method](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Factory Method)
 
 ### Abstract Factory: 
 Define uma interface pra criar familias de objetos sem a necessidade expor a concreta implementação. 
-* [Abstract Factory](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Abstract Factory)
+ * [Abstract Factory](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Abstract Factory)
 
 ### Builder
 "Separar a construção de um objeto complexo de sua representação de modo que o mesmo processo de construção possa criar diferentes representações."
-* [Builder](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Builder Pattern)
+ * [Builder](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Builder Pattern)
 
 ### Prototype
 "Especificar tipos de objetos a serem criados usando uma instância protótipo e criar novos objetos pela cópia desse protótipo."
 Funciona criando cópias de um objeto já pronto (instanciado), muito útil para otimizar o processo de instanciar objetos complexos e demorados.  
-* [Prototype](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Prototype Pattern)
+ * [Prototype](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Prototype Pattern)
 
 ### Singleton
 "Garantir que uma classe tenha somente uma instância e fornece um ponto global de acesso para a mesma." 
-* [Singleton](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Singleton Pattern)
+ * [Singleton](https://github.com/fabriciorissetto/design-patterns-examples/1. Creational Patterns/Singleton Pattern)
 
 ## Structural Patterns
 
 ### Builder
 "Separar a construção de um objeto complexo de sua representação de modo que o mesmo processo de construção possa criar diferentes representações."
-* [Bridge Patterns](https://github.com/fabriciorissetto/design-patterns-examples/2. Structural Patterns/Bridge Pattern)
+ * [Bridge Patterns](https://github.com/fabriciorissetto/design-patterns-examples/2. Structural Patterns/Bridge Pattern)
 
 ### Proxy
 "Fornecer um substituto ou marcador da localização de outro objeto para controlar o acesso a esse objeto."
-* [Proxy Patterns](https://github.com/fabriciorissetto/design-patterns-examples/2. Structural Patterns/Proxy Pattern)
+ * [Proxy Patterns](https://github.com/fabriciorissetto/design-patterns-examples/2. Structural Patterns/Proxy Pattern)
 
 ### Adapter
 "Converter a interface de uma classe em outra interface, esperada pelo cliente. O Adapter permite que interfaces incompatíveis trabalhem em conjunto – o que, de outra forma, seria impossível."
