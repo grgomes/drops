@@ -28,30 +28,40 @@ Sugestões de ferramentas:
 - Duplicações de Código
 
 Pode ser usado das seguintes formas:
-1) Através de um plug-in instalado no VSTUDIO chamado [SonarLint](http://www.sonarlint.org/visualstudio/).
-2) Integração por linha de comando [Sonar-Scanner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner).
+- Através de um plug-in instalado no VSTUDIO chamado [SonarLint](http://www.sonarlint.org/visualstudio/).
+- Integração por linha de comando [Sonar-Scanner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner).
 
 
 ### Sonar-Scanner
 1. Utilize o Sonnar-Scanner para enviar os dados de análise de código para o servidor do SonarQube. Pode ser feito manualmente por linha de comando ou integrado no seu processo de CI.
+
 2. Acesse a página [Analyzing with SonarQube Scanner for MSBuild](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild) e baixe o arquivo ZIP.
+
 3. Descompacte o arquivo em algum diretório e inclua o direório no PATH do Windows. Ex: "C:\sonar-scanner-msbuild-2.2.0.24\sonar-scanner-2.8\bin"
+
 4. Adicione o arquivo sonar-project.properties no diretório raiz da aplicação conforme o exemplo:
+
 <center style="margin: 20px">
   <img style="margin-top: 20px" src="{{ site.baseurl }}/content/2016-12-05-sonarqube-code-analysis/sonar-project.properties.png" />
   <small>sonar-project.properties</small>
 </center>
+
 5. Acesse o servidor do SonarQube, acesse o seu perfil, vá em "My Account", em seguida "Security" e gere um token que será utilizado para enviar os dados de análise do seu projeto para o SonarQube.
+
 <center style="margin: 20px">
   <img style="margin-top: 20px" src="{{ site.baseurl }}/content/2016-12-05-sonarqube-code-analysis/generate-token.png" />
   <small>sonar-project.properties</small>
 </center>
+
 6. No prompt  de comandos, execute a senguinte linha:
-´c:\meuprojeto\fontes>sonar-scanner -Dsonar.login=14273dca3f9c735f924610aa3ae1503a0ffe3816 -Dsonar.projectVersion=2.0.0.1
+
+`c:\meuprojeto\fontes>sonar-scanner -Dsonar.login=14273dca3f9c735f924610aa3ae1503a0ffe3816 -Dsonar.projectVersion=2.0.0.1
+
 <center style="margin: 20px">
   <img style="margin-top: 20px" src="{{ site.baseurl }}/content/2016-12-05-sonarqube-code-analysis/command-prompt.png" />
   <small>sonar-project.properties</small>
 </center> 
+
 7. Verifique os logs gerados. De acordo com as configurações de qualidade do módulo QualityGate do SonarQube o processo de análise pode retornar um erro. Os erros podem ser vistos no portal do Sonar acessando o projeto.
 
 Veja também:
