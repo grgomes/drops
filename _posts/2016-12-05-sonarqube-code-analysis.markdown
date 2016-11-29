@@ -33,7 +33,7 @@ Pode ser usado das seguintes formas:
 
 
 ### Sonar-Scanner
-1. Utilize o Sonnar-Scanner para enviar os dados de análise de código para o servidor do SonarQube. Pode ser feito manualmente por linha de comando ou integrado no seu processo de CI.
+1. Utilize o Sonar-Scanner para enviar os dados de análise de código para o servidor do SonarQube. Pode ser feito manualmente por linha de comando ou integrado no seu processo de CI.
 
 2. Acesse a página [Analyzing with SonarQube Scanner for MSBuild](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild) e baixe o arquivo ZIP.
 
