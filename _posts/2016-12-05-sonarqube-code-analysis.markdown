@@ -5,8 +5,8 @@ title: "Análise de código com SonarQube"
 author: giovanidecusati
 abstract: Utilizando a ferramenta SonarQube para análise de código
 ---
-Práticas de análise de código são fundamentais durante o processo de desenvolvimento de software. É comum nos projetos a utilziação de ferramentas estáticas de análise de código para otimizar o processo de revisão.
-O uso deste tipo ferramenta torna-se ainda mais poderoso quando alinhado a um processo de inegração contínua, fazendo com que códigos de baixa qualidade sejam recusados.
+Práticas de análise de código são fundamentais durante o processo de desenvolvimento de software. É comum nos projetos a utilização de ferramentas estáticas de análise de código para otimizar o processo de revisão.
+O uso deste tipo ferramenta torna-se ainda mais poderoso quando alinhado a um processo de integração contínua, fazendo com que códigos de baixa qualidade sejam recusados.
 O objetivo deste post é sugerir algumas ferramentas de análise de código, dando ênfase a ferramenta SonarQube.     
 
 Sugestões de ferramentas:
@@ -18,7 +18,7 @@ Sugestões de ferramentas:
 - [NDepend](http://www.ndepend.com)
 
 ## SonarQube
-É uma plataforma aberta para gerenciamento da qualidade do código. Oferece um conjunto de regras que cobre os principais apectos da qualidade, sendo eles:
+É uma plataforma aberta para gerenciamento da qualidade do código. Oferece um conjunto de regras que cobre os principais aspectos da qualidade, sendo eles:
 - Arquitetura e Design
 - Comentários
 - Regras de Código
@@ -37,7 +37,7 @@ Pode ser usado das seguintes formas:
 
 2. Acesse a página [Analyzing with SonarQube Scanner for MSBuild](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner+for+MSBuild) e baixe o arquivo ZIP.
 
-3. Descompacte o arquivo em algum diretório e inclua o direório no PATH do Windows. Ex: "C:\sonar-scanner-msbuild-2.2.0.24\sonar-scanner-2.8\bin"
+3. Descompacte o arquivo em algum diretório e inclua o diretório no PATH do Windows. Ex: "C:\sonar-scanner-msbuild-2.2.0.24\sonar-scanner-2.8\bin"
 
 4. Adicione o arquivo sonar-project.properties no diretório raiz da aplicação conforme o exemplo:
 
@@ -53,7 +53,7 @@ Pode ser usado das seguintes formas:
   <small>sonar-project.properties</small>
 </center>
 
-6. No prompt  de comandos, execute a senguinte linha:
+6. No prompt  de comandos, execute a seguinte linha:
 
 `c:\meuprojeto\fontes>sonar-scanner -Dsonar.login=14273dca3f9c735f924610aa3ae1503a0ffe3816 -Dsonar.projectVersion=2.0.0.1
 
