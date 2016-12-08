@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2016-10-16T13:00:00-03:00
+date: 2016-12-08T13:00:00-03:00
 title: "Clean Code, Code Smells, DRY e KISS. Em busca do código ideal."
 author: guilhermepohlmann
 abstract: >
