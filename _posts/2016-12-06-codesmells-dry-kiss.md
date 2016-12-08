@@ -7,7 +7,7 @@ abstract: >
   Entendendo alguns dos princípios para um código limpo e de fácil manutenção. 
 ---
 
-Nós como desenvolvedores e engenheiros de software temos como trabalho resolver problemas através do nosso código. Mas somente resolver o problema não é suficiente, pois o nosso código pode acabar se tornando o problema. Como profissionais, devemos nos preocupar em manter um código de fácil leitura, compreensão e manutenção. Devemos pensar não só em nós, mas nas próximas pessoas que irão evoluir e dar manutenção nesse código. É aqui que entram os princípios de Clean Code, e é aqui que surgem os Code Smells. Você já olhou seu código de 6 meses, ou até de anos atrás? E você pensou, "Mas que diabos eu fiz aqui... “? Então provavelmente você já fez um Code Smell.
+Nós, como desenvolvedores e engenheiros de software, temos como missão resolver problemas através do nosso código. Mas somente resolver o problema não é suficiente, pois o nosso código pode acabar se tornando o problema. Como profissionais, devemos nos preocupar em manter um código de fácil leitura, compreensão e manutenção. Devemos pensar não só em nós, mas nas próximas pessoas que irão evoluir e dar manutenção nesse código. É aqui que entram os princípios de Clean Code, e é aqui que surgem os Code Smells. Você já olhou seu código de 6 meses, ou até de anos atrás? E você pensou, "Mas que diabos eu fiz aqui... “? Então provavelmente você já fez um Code Smell.
 
 ### O que são Code Smells ?
 
@@ -19,7 +19,7 @@ Code Smells são aqueles pedaços de código que provavelmente podem ser escrito
 
 #### Eles são realmente ruims ?
 
-Você está se questionando se terá problemas ou se seu código simplesmente vai ficar feio ? Sim você pode ter problemas. Os Smells normalmente estão ligados a problemas de Design mais profundos na aplicação, e podem também causar grandes impactos em performance.
+Você está se questionando se terá problemas ou se seu código simplesmente vai ficar feio? Sim, você pode ter problemas. Os Smells normalmente estão ligados a problemas de Design mais profundos na aplicação, e podem também causar grandes impactos em performance.
 
 #### E agora, o que eu faço ?
 
@@ -87,7 +87,7 @@ Separação de responsabilidades é um conceito que pode ser aplicado em classes
 
 **Solução**
 
-- Pense com cuidado na hora de separar as responsabilidades de uma classe ou método, se possível utilize os conceitos de apresentados sobre código duplicado, métodos muito longos e nomes sugestivos.
+- Pense com cuidado na hora de separar as responsabilidades de uma classe ou método, se possível, utilize os conceitos de apresentados sobre código duplicado, métodos muito longos e nomes sugestivos.
 
 Veja o exemplo abaixo:
 
@@ -143,7 +143,7 @@ Veja o exemplo abaixo:
 
 	public class SmellClass
 	{
-		//Esse código possui uma complexidade de 3. Todo cálculo de complexidade já inicia em 1.
+		//Esse código possui uma complexidade de 2. Todo cálculo de complexidade já inicia em 1.
 		//E aumenta 1 para cada desvio de fluxo, nesse caso um if e um else.
 		public bool ValidateSmell(SomeClass someClass)
 		{
