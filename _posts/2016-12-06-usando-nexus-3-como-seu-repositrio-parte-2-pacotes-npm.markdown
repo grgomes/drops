@@ -73,6 +73,8 @@ _auth=YWRtaW46YWRtaW4xMjM=
 echo -n 'myuser:mypassword' | openssl base64
 ```
 
+Você precisa setar um usuário para publicar pacotes. Se você publicar da sua máquina local, `npm publish` irá usar suas configurações de usuário do seu `~/.npmrc` (na sua home, não no seu projeto). Se você não tem essa configuração, ou quer fazer a publicação na integração contínua, você pode setar `email=qualquer@email.com` no `./npmrc` do projeto. Qualquer email serve, não precisa ser real.
+
 Se você tem um projeto que você quer **publicar** para seu Nexus, coloque isso no `package.json`:
 
 ```
