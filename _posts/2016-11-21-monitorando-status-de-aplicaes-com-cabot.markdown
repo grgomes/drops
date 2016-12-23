@@ -62,7 +62,7 @@ Infelizmente, Cabot não tem uma REST API que possamos usar para configurar noss
 
 Atualmente vejo 2 opções para automatizar:
 
-- eu criei o [cabot-zombie](https://github.com/rafaeleyng/cabot-zombie), que roda um *headless browser* e configura Cabot baseado em um objeto Javascript contendo as configurações. Olhe o projeto para mais detalhes.
+- [Edit 23/12/2016: deprecated! Veja cabot-db-config abaixo] eu criei o [cabot-zombie](https://github.com/rafaeleyng/cabot-zombie), que roda um *headless browser* e configura Cabot baseado em um objeto Javascript contendo as configurações. Olhe o projeto para mais detalhes.
 
 - acesse a instância Postgres que o Cabot usa e faça alguns inserts diretamente, automatizando isso da forma que preferir. As tabelas envolvidas são:
   - cabotapp_instance_status_checks
@@ -75,4 +75,6 @@ Atualmente vejo 2 opções para automatizar:
   - cabotapp_statuscheck
   - cabotapp_statuscheckresult
 
-O que eu uso é cabot-zombie para criar tudo, e se quiser mudar alguma coisa, deleto tudo das tabelas e rodo novamente o cabot-zombie com minhas alterações.
+- Eu criei [cabot-db-config](https://www.npmjs.com/package/cabot-db-config), que usa uma configuração similar ao cabot-zombie, mas é bem mais rápido e confiável, porque conecta diretamente ao banco de dados do seu Cabot para inserir a configuração.
+
+O que eu uso é cabot-db-config para criar tudo, e se quiser mudar alguma coisa, deleto tudo das tabelas e rodo novamente o cabot-zombie com minhas alterações.
