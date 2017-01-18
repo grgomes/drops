@@ -74,15 +74,23 @@ Dentre os benefícios no uso do Code Review, podemos citar
 ### Mais Sobre Code Review
 
 [Giving Better Code Reviews](https://medium.com/@mrjoelkemp/giving-better-code-reviews-16109e0fdd36#.b6diqgvfp)
+
 [Increase Defect Detection With Code Review Checklist](https://blog.fogcreek.com/increase-defect-detection-with-our-code-review-checklist-example/)
+
 [Java Code Review Checklist](https://dzone.com/articles/java-code-review-checklist)
+
 [PDF: Best Kept Secrets of Peer Code Review](https://smartbear.com/SmartBear/media/pdfs/best-kept-secrets-of-peer-code-review.pdf)
+
 [Effective Navigation in Pair Programming](https://www.thoughtworks.com/insights/blog/effective-navigation-in-pair-programming)
 
 ### Referências
 
 [What is Code Review?](https://smartbear.com/learn/code-review/what-is-code-review/)
+
 [Why Code Reviews Matter](https://www.atlassian.com/agile/code-reviews)
+
 [Code Review Via GitLab Merge Requests](https://yalantis.com/blog/code-review-via-gitlab-merge-requests-code-review-must/)
+
 [PDF: Best Kept Secrets of Peer Code Review](https://smartbear.com/SmartBear/media/pdfs/best-kept-secrets-of-peer-code-review.pdf)
+
 [Four Ways to a Practical Code Review](http://www.methodsandtools.com/archive/archive.php?id=66)
