@@ -58,7 +58,7 @@ Solução para times distribuídos ou para os casos que demandam um processo mai
  - Pode conter mecanismos para coletar métricas, ficando mais visível os benefícios da sua execução
 
  Um destes softwares (utilizado na CWI) é o GitLab, que através de seu processo de Merge Request permite que seja adicionado o fluxo de Code Review, antes que aquele fragmento de código seja adicionado a branch principal. 
- [Neste artigo] (https://yalantis.com/blog/code-review-via-gitlab-merge-requests-code-review-must/) pode-se verificar quais são os passos necessários para implementar esse processo dentro da ferramenta.
+ [Neste artigo](https://yalantis.com/blog/code-review-via-gitlab-merge-requests-code-review-must/) pode-se verificar quais são os passos necessários para implementar esse processo dentro da ferramenta.
 
 ### Alguns Benefícios 
 
