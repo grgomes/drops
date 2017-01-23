@@ -23,12 +23,12 @@ Basicamente consiste em dividir a responsabilidade com todos do time, ou seja, n
  
 ### Algumas desvantagens
 
-Se as cerimonias e uso de ferramentas para auxiliar no processo forem sub-utilizados, pode ocorrer o efeito contrario do esperado:       
+Se as cerimonias e uso de ferramentas para auxiliar no processo forem subutilizados, pode ocorrer o efeito contrario do esperado:       
   - Como atraso nas entregas
-  - Um aumento de bugs devido a refatoração
+  - Um aumento de bugs devido a refactors
   - Pensar que "outra pessoa" irá fazer
 
-Dependendo das pessoas envolvidas pode acabar causando conflitos devidos ideias diferentes e um certo "orgulho", e deve-se sempre ter o cuidado para contornar esse tipo de situação.
+Dependendo dos envolvidos pode acabar causando conflito devido ideias diferentes e um certo "orgulho", e deve-se sempre ter o cuidado para contornar esse tipo de situação.
   
 
 
