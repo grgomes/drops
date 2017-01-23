@@ -15,20 +15,21 @@ Se todos da equipe se sentem confortáveis com o que foi construído facilita e 
 Basicamente consiste em dividir a responsabilidade com todos do time, ou seja, ninguém é dono de alguma classe, método, tela  ou módulo em específico, todos são responsáveis pela manutenção e em garantir a qualidade do código do projeto.
 
 ### Algumas vantagens
-  Ter o conhecimento difundido de forma homogênea pela equipe, para isso o time deve constantemente trocar informações e assim aumenta o nível técnico dos demais;
+  - Ter o conhecimento difundido de forma homogênea pela equipe, para isso o time deve constantemente trocar informações e assim aumenta o nível técnico dos demais;
   
-  Código acaba ficando muito mais legível e de fácil entendimento para todos, já que se deve aplicar diversas técnicas para garantir as boas práticas;
+  - Código acaba ficando muito mais legível e de fácil entendimento para todos, já que se deve aplicar diversas técnicas para garantir as boas práticas;
   
-  Time perde o receio de realizar manutenções e adição de novas funcionalidades em qualquer parte do sistema, principalmente a médio e longo prazo.
+  - Time perde o receio de realizar manutenções e adição de novas funcionalidades em qualquer parte do sistema, principalmente a médio e longo prazo.
  
 ### Algumas desvantagens
 
-Se as cerimonias e uso de ferramentas para auxiliar no processo forem subutilizados, pode ocorrer o efeito contrario do esperado:       
-  - Como atraso nas entregas
-  - Um aumento de bugs devido a refactors
-  - Pensar que "outra pessoa" irá fazer
+- Se as cerimonias e uso de ferramentas para auxiliar no processo forem subutilizados, pode ocorrer o efeito contrario do esperado:         
 
-Dependendo dos envolvidos pode acabar causando conflito devido ideias diferentes e um certo "orgulho", e deve-se sempre ter o cuidado para contornar esse tipo de situação.
+    - Como atraso nas entregas
+    - Um aumento de bugs devido a refactors
+    - Pensar que "outra pessoa" irá fazer
+
+- Dependendo dos envolvidos pode acabar causando conflito devido ideias diferentes e um certo "orgulho", e deve-se sempre ter o cuidado para contornar esse tipo de situação.
   
 
 
