@@ -26,7 +26,7 @@ Basicamente consiste em dividir a responsabilidade com todos do time, ou seja, n
   
   Se o projeto for curto e/ou equipe pequena o tempo extra gasto pode acabar sendo prejudicial;
   
-  Dependendo das pessoas envolvidas pode acabar causando conflitos devidos ideias diferentes e um certo "orgulho".
+  Dependendo das pessoas envolvidas pode acabar causando conflitos devidos ideias diferentes e um certo "orgulho", e deve-se sempre ter o cuidado para contornar esse tipo de situação.
   
 
 
