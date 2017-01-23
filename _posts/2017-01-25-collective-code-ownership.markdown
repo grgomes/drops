@@ -1,131 +1,65 @@
 ---
 layout: post
-date: 2016-07-25T09:53:21-03:00
-title: "Mantendo a sessão dos usuários com Redis"
+date: 2017-01-25T09:53:21-03:00
+title: "Collective Code Ownership - O código é de todos"
 author: eskeff
 abstract: >
-  Mantendo a sessão dos usuários com Redis
+  Collective Code Ownership
 ---
 
-A publicação de uma nova versão em produção de sistemas despreparados, fatalmente acarreta na “derrubada” de todos os nossos usuários conectados. E isso ocorre já que as sessões dos usuários por padrão ficam armazenadas no servidor de aplicação. 
+O que buscamos com a disseminação do conhecimento do código no projeto é justamente evitar situações em que somente um indivíduo é responsável ou “dono” de algum módulo ou tela do sistema. Imagina se esse projeto já está em produção e precisamos fazer um hotfix urgente para o cliente. Vamos dizer que no momento não podemos solucionar por que somente o Fulano sabe como?
+Se todos da equipe se sentem confortáveis com o que foi construído facilita e muito a passagem de conhecimento para novos colegas, bem como agilidade para manutenções no código.
 
-Por isso, o melhor horário para essa ação, geralmente a madrugada, precisa sempre ser pauta desse rotineiro processo.
+### Definição
 
-Mas se for um sistema crítico, de alta disponibilidade?  Não teríamos um horário ideal para publicar uma nova versão, somente um horário de menor impacto possível para os usuários.
+Basicamente consiste em dividir a responsabilidade com todos do time, ou seja, ninguém é dono de alguma classe, método, tela  ou módulo em específico, todos são responsáveis pela manutenção e em garantir a qualidade do código do projeto.
 
-Então precisamos de uma solução para não ter que fazer o usuário autenticar-se novamente e perder todo seu trabalho.
-
-A solução proposta para esse cenário é utilizar o [Redis](http://redis.io) e ela pode ser aplicada em qualquer sistema que precise armazenar as sessões do usuário.
-
-Nesse Drops irei utilizar ele em conjunto com o framework [Spring Boot](http://projects.spring.io/spring-boot) para Java.
-
-# O que é Redis?
-
-Em suma é um banco não relacional em memória, que pode ser usado como cache, mensageria ou como nesse exemplo guardar as sessões dos usuários.
-
-# Construindo uma aplicação de exemplo com Spring Boot
-
-Vamos construir uma aplicação com uma camada simples de segurança de exemplo, para isso precisaremos de:
-
-```
-•	Uma IDE, no caso será utilizado Eclipse;
-•	Java JDK 1.6
-•	Maven 3.0
-
-
-1)	Clonar o projeto https://github.com/eskeff/spring-redis;
-2)	Importar no Eclipse como Maven Project;
-3)	Executar a classe App.java;
-
-```
-
-Feito, temos uma aplicação web com segurança rodando, acesse http://localhost:8080/hello e verá uma página parecida com essa:
-
- ![image](https://github.com/eskeff/images/blob/master/1_login.png?raw=true)
-
- 
-Acesse usando as credencias “user@123”, e terá acessado a página:
-
- ![image](https://github.com/eskeff/images/blob/master/2_hello.png?raw=true)
- 
-Nesse ponto se derrubarmos o servidor de aplicação e subir novamente iremos perder a sessão, para que isso não ocorra vamos seguir com o Drops.
-
-# Instalar o Redis com Docker 
-
-O Redis pode ser facilmente instalado no [Windows](https://github.com/rgl/redis/downloads) ou [Linux](http://redis.io/topics/quickstart) 
-Mas para mantermos um padrão iremos utilizar o  [Docker](https://www.docker.com/) para facilitar nossas vidas :).
-
-**Windows**
-
-Baixe  a versão do seu [Windows](https://docs.docker.com/docker-for-windows/)  e instale normalmente com as configurações padrão.
-
-**Linux**
-
-Escolha sua distribuição [Linux](https://docs.docker.com/engine/installation/linux/)  e instale normalmente com as configurações padrão.
-
-Feito isso o comando `docker` já deve funcionar.
-
-Após, simplesmente rode o comando:
-`docker run --name meu-redis -d -p 6379:6379 redis redis-server` e espere alguns instantes, após finalizar rode o comando `docker ps`:
- 
-  ![image](https://github.com/eskeff/images/blob/master/3_docker.png?raw=true)
-
-Com isso o Redis já está rodando na sua máquina, no meu caso no localhost na porta 6379.
-
-Execute `docker exec -it meu-redis redis-cli` para conseguirmos acessar o Redis:
-
-  ![image](https://github.com/eskeff/images/blob/master/4_redis.png?raw=true)
-
-# Voltando a aplicação  
-
-Então vamos voltar para o nosso projeto.
-Adicione a dependência no pom.xml:
-
-```
-<dependency>
-     <groupId>org.springframework.boot</groupId>
-     <artifactId>spring-boot-starter-redis</artifactId>       
-</dependency>
-```
-E retire todos os comentários da classe HttpSessionConfig.java:
- 
-   ![image](https://github.com/eskeff/images/blob/master/5_eclipse.png?raw=true)
-
-Agora basta rodar a aplicação novamente e após logar:
-
-  ![image](https://github.com/eskeff/images/blob/master/2_hello.png?raw=true)
- 
- E então execute `Keys *` no Redis e deve parecer:
-
-   ![image](https://github.com/eskeff/images/blob/master/6_redis.png?raw=true)
- 
-Ok, a sessão está sendo armazenada no Redis
-
-
-Agora podemos derrubar nossa aplicação:
- 
-  ![image](https://github.com/eskeff/images/blob/master/7_fail.png?raw=true)
-
-E subi-la novamente e recarregar a página “http://localhost:8080/hello”:
+### Algumas vantagens
+  Ter o conhecimento difundido de forma homogênea pela equipe, para isso o time deve constantemente trocar informações e assim aumenta o nível técnico dos demais;
   
-![image](https://github.com/eskeff/images/blob/master/2_hello.png?raw=true)
+  Código acaba ficando muito mais legível e de fácil entendimento para todos, já que se deve aplicar diversas técnicas para garantir as boas práticas;
+  
+  Time perde o receio de realizar manutenções e adição de novas funcionalidades em qualquer parte do sistema, principalmente a médio e longo prazo.
  
-**E continuamos autenticados, SUCESSO!!!**
-
-Agora um último teste, vamos executar o comando `flushall` que removerá todos os registros no Redis:
-
-  ![image](https://github.com/eskeff/images/blob/master/8_redis.png?raw=true)
- 
-E tentar acessar a página http://localhost:8080/hello novamente:
-
-  ![image](https://github.com/eskeff/images/blob/master/1_login.png?raw=true)
- 
-E fomos redirecionados para a tela de login já que o Spring não tem mais a sessão anterior 
+### Algumas desvantagens
+  A curto prazo o processo principalmente no início pode ser demorado, já que muitas vezes vai ser preciso envolver mais de uma pessoa para explicar a regra de negócio bem como o código que será modificado;
+  
+  Apesar de diversas ferramentas e técnicas pode acabar passando alguma coisa, e gerando algum bug devido a refatoração por exemplo;
+  
+  Dependendo das pessoas envolvidas pode acabar causando conflitos devidos ideias diferentes e um certo "orgulho".
+  
 
 
-# Conclusão
+### Mas como aplicar essa prática no seu projeto?
 
-Com essa pequena aplicação conseguimos demonstrar que podemos salvar as sessões de forma externa, facilitando a implantação de deploys de baixo risco como Blue-Green Deployment.
-O próximo passo é utilizar o Redis em conjunto com o Redis Sentinel na configuração Master e Slave para garantirmos uma alta disponibilidade das sessões.
+Claro que a realidade dos projetos muitas vezes nos impede de atingir o mundo ideal devido custos e tempo do projeto, mas se tivermos as ferramentas e processos para nos auxiliar, o objetivo pode ser atingido.de forma mais eficiente, segue alguns deles:
 
-Até a próxima.
+ - Utilizar [Code Review](http://cwisoftware.github.io/drops/code-review) é uma das melhores maneiras de espalhar o conhecimento para a equipe.
+ - Se possivel praticar o Pair Programming.
+ - Deixar o código legível e de fácil manutenção como também demonstrado nos Drops [Code Smells](http://cwisoftware.github.io/drops/codesmells-dry-kiss)  e  [Design Patterns](http://cwisoftware.github.io/drops/design-patterns) 
+ - Ter uma padrão forte, consistente e bem documentado ajuda o desenvolvedor que precisar alterar outro modulo de seu projeto não se sinta perdido. 
+ - E seguir esse padrão, se não concordar, discuta com o time, mas não quebre o padrão sozinho e de forma silenciosa.
+ - Não ter medo de refatorar o código caso necessário.
+ - Testes unitários para toda funcionalidade e manutenção do código, para garantir a integridade do projeto e deixar confortável para quem for aplicar a mudança.
+ - Testes de aceitação automatizados 
+ - Fazer uso de [Integração Contínua](http://cwisoftware.github.io/drops/maturidade-integracao-continua) que executa esses testes a cada nova mudança.
+
+Essas são apenas alguns processos e ferramentas que auxiliam e muito o dia a dia, para ser possível aplicar espalhar o conhecimentos para todos.
+
+### Conclusão
+
+Sempre ter em mente que todos devem trabalhar para o bem do projeto, e não somente para se livrar de uma tarefa.
+E isso significa se preocupar com a qualidade, se envolver com o time, assumir responsabilidades, ter opinião e defender suas ideias. 
+
+### Referências
+
+ - [Collective Code Ownership](http://wiki.c2.com/?CollectiveCodeOwnership)
+ - [Collective Ownership](http://www.extremeprogramming.org/rules/collective.html)
+ - [Are there weaknesses with Collective Code Ownership?](https://www.infoq.com/news/2008/05/weaknesses_collective_code) 
+ - [CodeOwnership](https://www.martinfowler.com/bliki/CodeOwnership.html)
+ - [Code Ownership – Who Should Own the Code?](http://swreflections.blogspot.com.br/2013/04/code-ownership-who-should-own-code.html)
+ - [Revisiting XP: be a thoughtful programmer by exercising more collective ownership](https://www.infoq.com/articles/revisit-p-collective)
+
+
+
+
