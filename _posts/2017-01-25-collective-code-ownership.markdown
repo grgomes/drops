@@ -22,11 +22,13 @@ Basicamente consiste em dividir a responsabilidade com todos do time, ou seja, n
   Time perde o receio de realizar manutenções e adição de novas funcionalidades em qualquer parte do sistema, principalmente a médio e longo prazo.
  
 ### Algumas desvantagens
-  A curto prazo o processo, principalmente no início pode ser demorado, já que muitas vezes vai ser preciso envolver mais de uma pessoa para explicar a regra de negócio bem como o código que será modificado;
-  
-  Se o projeto for curto e/ou equipe pequena o tempo extra gasto pode acabar sendo prejudicial;
-  
-  Dependendo das pessoas envolvidas pode acabar causando conflitos devidos ideias diferentes e um certo "orgulho", e deve-se sempre ter o cuidado para contornar esse tipo de situação.
+
+Se as cerimonias e uso de ferramentas para auxiliar no processo forem sub-utilizados, pode ocorrer o efeito contrario do esperado:       
+  - Como atraso nas entregas
+  - Um aumento de bugs devido a refatoração
+  - Pensar que "outra pessoa" irá fazer
+
+Dependendo das pessoas envolvidas pode acabar causando conflitos devidos ideias diferentes e um certo "orgulho", e deve-se sempre ter o cuidado para contornar esse tipo de situação.
   
 
 
