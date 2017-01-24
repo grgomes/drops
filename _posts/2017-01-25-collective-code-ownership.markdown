@@ -23,8 +23,7 @@ Basicamente consiste em dividir a responsabilidade com todos do time, ou seja, n
  
 ### Algumas desvantagens
 
-- Se as cerimonias e uso de ferramentas para auxiliar no processo forem subutilizados, pode ocorrer o efeito contrario do esperado:         
-
+- Se as cerimonias e uso de ferramentas para auxiliar o processo forem subutilizados, pode ocorrer o efeito contrario do esperado:         
     - Como atraso nas entregas
     - Um aumento de bugs devido a refactors
     - Pensar que "outra pessoa" irá fazer
