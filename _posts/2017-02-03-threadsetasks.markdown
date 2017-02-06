@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2017-02-03T00:58:56-02:00
+date: 2017-02-05T00:58:56-02:00
 title: ".NET - Threads, Tasks e o tal do ThreadPool"
 author: fabriciorissetto
 ---
