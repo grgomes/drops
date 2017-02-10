@@ -5,7 +5,7 @@ title: ".NET - Threads, Tasks e o tal do ThreadPool"
 author: fabriciorissetto
 ---
 
-Certa vez em um projeto precisei desenvolver uma ferramenta que era como se fosse um “worker” que tinha como função realizar duas tarefas simples:
+Certa vez em um projeto precisei desenvolver uma espécie de “worker” distribuído que tinha como função realizar duas simples tarefas:
 
 - Obter um número X (1000, por exemplo) de eventos através de uma queue
 - Sincronizar esses eventos com um Web Service remoto (cada uma dessas sincronizações podia demorar até 1 minuto).
@@ -75,7 +75,7 @@ Já para o outro caso, onde minha tarefa é resource bound, não faz muito senti
   <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-02-03-threadsetasks/bored.png" />
 </center>
 
-## Back to de problem
+## Back to the problem
 
 Sabendo disso, ficou claro para mim que o que eu precisava eram threads. No final das contas acabei com um código muito próximo desse ([gist completo aqui](https://gist.github.com/fabriciorissetto/96b9db06f17bd10f4fdd0ab969a83845)):
 
@@ -99,9 +99,9 @@ Agora sim o negócio tava funcionando como eu queria:
   <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-02-03-threadsetasks/threads.gif" />
 </center>
 
-Observem que também modifiquei a lógica do algoritmo. Ao invés de obter 1000 eventos da fila, criar 1000 threads pra sincronizá-los e em seguida destruí-las, eu optei por criar uma quantidade menor de threads (aproximandamente 100) e deixá-las abertas durante toda a execução do programa. <del>Poderia chamar essas 100 threads de "Pool" só pra confundir o post.</del> O conteúdo dessas threads é que era responsável por: obter o último evento da fila, sincronizá-lo.
+Observem que também modifiquei a lógica do algoritmo. Ao invés de obter 1000 eventos da fila, criar 1000 threads pra sincronizá-los e em seguida destruí-las, eu optei por criar uma quantidade menor de threads (aproximadamente 100) e deixá-las abertas durante toda a execução do programa. <del>Poderia chamar essas 100 threads de "Pool" só pra confundir o post.</del> O conteúdo dessas threads é que era responsável por: obter o último evento da fila, sincronizá-lo.
 
-Como cheguei nessa quantiadde ideal de threads? Testes. Testando os limites da máquina descobri que com 1500 threads dava OutOfMemoryException, e que aproximadamente 500 já era suficiente pra deixar o CPU no talo (context switches).
+Como cheguei nessa quantidade ideal de threads? Testes. Testando os limites da máquina descobri que com 1500 threads dava OutOfMemoryException, e que aproximadamente 500 já era suficiente pra deixar o CPU no talo (context switches).
 
 ## Tasks
 
@@ -127,6 +127,6 @@ Entretanto utilizar tasks (mesmo as long running) traz algumas facilidades para 
 4. Exceptions em tasks filhas propagam para tasks pais.
 5. Tasks suportam cancelamento de maneira simples via token de cancelamento.
 
-Sendo assim, é possível utilizar tasks tanto para tarefas tarefas CPU bound quanto Resource bound **contanto que se configure corretamente a opção "LongRunning" para esse segundo caso**.  
+Sendo assim, é possível utilizar tasks tanto para tarefas CPU bound quanto Resource bound **contanto que se configure corretamente a opção "LongRunning" para esse segundo caso**.  
 
-Mas não se esqueça, quando se fala em paralelismo normalmente estamos visando performance. Quando se trata de performance não podemos trabalhar com suposições. Nada melhor do que fazer testes, comparações e análises de comportamento do código pra tirar conclusões se a solução está atendendo devidamente ao problema.
+Mas não se esqueça, quando se fala em paralelismo normalmente estamos visando performance. Quando se trata de performance não podemos trabalhar com suposições. Nada melhor do que fazer testes, comparações e análises de comportamento do código para tirar conclusões se a solução está atendendo devidamente ao problema.
