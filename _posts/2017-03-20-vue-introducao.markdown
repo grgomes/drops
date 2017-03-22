@@ -24,7 +24,7 @@ Mas não é só com stars que uma library se mantém atrativa. Para isso é prec
 O conceito de single-file component é centralizar em um único arquivo tudo aquilo que compõe o componente - estrutura, comportamento e visual. Esse tipo de abordagem traz certas vantagens, como: 
 
 - Melhor visualização de cada parte do componente;
-- Possibilitar o uso de supersets de forma independente dentro do componente;
+- Possibilitar o uso de _supersets_(Jade, Sass, TypeScript, ...) de forma independente dentro do componente;
 - Possibilitar o reuso de partes do sistema ao centralizar os componentes.
 
 Seu uso só é possível caso seja usado junto com ferramentas como Webpack, Browserify ou Rollup.
