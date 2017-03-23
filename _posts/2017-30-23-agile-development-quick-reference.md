@@ -125,14 +125,14 @@ Para ter sucesso com o Agile, é necessario aceitar algumas incertezas, saber va
 
 # REFERENCES:
 
-[^1]Manifesto for Agile Software Development  - http://agilemanifesto.org/
+Manifesto for Agile Software Development  - http://agilemanifesto.org/
 
-[^2]Explaining Agile - https://www.forbes.com/sites/stevedenning/2016/09/08/explaining-agile/#5756d66d301b
+Explaining Agile - https://www.forbes.com/sites/stevedenning/2016/09/08/explaining-agile/#5756d66d301b
 
-[^3]What is Agile - https://www.forbes.com/sites/stevedenning/2016/08/13/what-is-agile/#58d0e3026e3d
+What is Agile - https://www.forbes.com/sites/stevedenning/2016/08/13/what-is-agile/#58d0e3026e3d
 
-[^4]What is Agile? - http://www.agilenutshell.com/
+What is Agile? - http://www.agilenutshell.com/
 
-[^5]Comprehensive Guide to the Agile Manifesto - https://www.smartsheet.com/comprehensive-guide-values-principles-agile-manifesto
+Comprehensive Guide to the Agile Manifesto - https://www.smartsheet.com/comprehensive-guide-values-principles-agile-manifesto
 
-[^6]Embracing Agile - https://hbr.org/2016/05/embracing-agile
+Embracing Agile - https://hbr.org/2016/05/embracing-agile
