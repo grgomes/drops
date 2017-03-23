@@ -30,13 +30,13 @@ De volta as suas origens, o _Agile Manifesto_ e seus doze princípios foram cons
 
 ## Um Pouco de História
 
-O enorme tempo de atraso entre os requisitos de negócio (as aplicações e características que os clientes estavam solicitando) e a entrega da tecnologia que deveria atender essa necessidade, levou a uma enorme número de projetos cancelados.
+O enorme tempo de atraso entre os requisitos de negócio (as aplicações e características que os clientes estavam solicitando) e a entrega da tecnologia que deveria atender essa necessidade, levou a um enorme número de projetos cancelados.
 
-As partes de negócios, requisitos e solicitações do cliente frequetentemente mudavam durante este tempo de latência e o produto final dificilmente atendia às necessidades atuais.
+As partes de negócios, requisitos e solicitações do cliente frequententemente mudavam durante este tempo de latência e o produto final dificilmente atendia às necessidades atuais.
 
 Os modelos de desenvolvimento de software da época, liderados pelo modelo _WATERFALL_, não estavam atendendo à demanda em relação a rapidez das mudanças, e não aproveitavam a rapidez com que o software poderia ser alterado.
 
-Em 2000, um grupo de dezessete “líderes de pensamento”, incluindo Jon Kern, Kent Beck, Ward Cunningham, Arie van Bennekum e Alistair Cockburn, se encontraram pela primeira vez _resort_ em Oregon e mais tarde, em 2001, na estância de esqui _The Lodge at Snowbird_ em Utah.
+Em 2000, um grupo de dezessete “líderes de pensamento”, incluindo Jon Kern, Kent Beck, Ward Cunningham, Arie van Bennekum e Alistair Cockburn, se encontraram pela primeira vez em um _resort_ em Oregon e mais tarde, em 2001, na estância de esqui _The Lodge at Snowbird_ em Utah.
 Foi nessa segunda reunião em que o Manifesto Ágil e os doze princípios foram formalmente escritos.
 
 O [Manifesto](http://agilemanifesto.org/):
@@ -66,14 +66,14 @@ Cada metodologia aplica os quatro valores de diferentes maneiras, mas todos depe
 Seu objetivo principal era descrever a nova filosofia sobre a qual poderiam ser construídas práticas de desenvolvimento de software mais flexíveis e adaptáveis:
 
    - _**Indivíduos e interações** mais que_ processos e ferramentas
-    
+
    - _**Software em funcionamento** mais que_ documentação abrangente
-    
+
    - _**Colaboração com o cliente** mais que_ negociação de contratos
-    
+
    - _**Responder a mudanças mais** que_ seguir um plano
 
-Essas declarações de valores tinha a intenção de representar os “novos” conceitos por trás das abordagens _AGILE_ (“itens à esquerda”) com as práticas do _Waterfall_ mais comuns que fluía no mundo de desenvolvimento de software na época (“itens à direita”).
+Essas declarações de valores tinham a intenção de representar os “novos” conceitos por trás das abordagens _AGILE_ (“itens à esquerda”) com as práticas do _Waterfall_ mais comuns que fluíam no mundo de desenvolvimento de software na época (“itens à direita”).
 
 ## Os 12 Princípios
 
@@ -102,7 +102,7 @@ Esses princípios são um grupo de conceitos guias, com o propósito de ajudar e
    11. _As melhores arquiteturas, requisitos e designs emergem de times auto-organizáveis._
 
    12. _Em intervalos regulares, o time reflete em como ficar mais efetivo, então, se ajustam e otimizam seu comportamento de acordo._
-	
+
 
 # O Que É Agile ?
 
@@ -114,14 +114,14 @@ De modo sucinto, Agile é uma abordagem iterativa de entrega de software que con
   <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-30-23-agile-development-quick-reference/agile_x_waterfall.jpg" />
 </center>
 
-Evoluindo de ideologia para metodologia ao longo dos anos, hoje temos um grande variedade de tipos disponíveis, desde a sua publicação, foram construídas em torno destes princípios, e entre outros: 
+Evoluindo de ideologia para metodologia ao longo dos anos, hoje temos um grande variedade de tipos disponíveis, desde a sua publicação, foram construídas em torno destes princípios, e entre outros:
  - SCRUM
  - Extreme Programming (XP)
  - Kanban
  - Scrumban
  - DEVOPS (mais recentemente).
 
-Para ter sucesso com o Agile, é necessario aceitar algumas incertezas, saber valorizar as interações e se concentrar na entrega de produtos de trabalho a cada passo do processo, e suas partes interessadas devem entender os custos e os benefícios dessas escolhas.
+Para ter sucesso com o Agile, é necessário aceitar algumas incertezas, saber valorizar as interações e se concentrar na entrega de produtos de trabalho a cada passo do processo, e suas partes interessadas devem entender os custos e os benefícios dessas escolhas.
 
 # REFERENCES:
 
