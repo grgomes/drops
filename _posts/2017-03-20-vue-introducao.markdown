@@ -1,9 +1,9 @@
 ---
 layout: post
 date: 2017-03-20T09:44:43-03:00
-title: "Vuejs: Introducao"
+title: "Introdução ao Vuejs"
 author: calvingerling
-abstract: O que é Vuejs?
+abstract: "Como é e quais as vantagens?"
 ---
 
 Hoje em dia é inevitável falar sobre desenvolvimento web sem mencionar as inúmeras libraries/frameworks JavaScript focadas em __MV*__ para facilitar o esenvolvimento. Criada em 2014 por Evan You, o [Vue](https://vuejs.org) é mais uma delas, que se destaca por sua flexibilidade e escalabilidade ao ser "um conjunto de ferramentas que trabalham muito bem juntas", ou seja, enquanto seu core foca somente na "exibição de dados" na tela, o conjunto pode ser omplementado com "plugins" para novos comportamentos (e.g. requisições _http_ e rotas). Essa é uma abordagem diferente do Angular, que é um "monolito" com tudo e muito mais desde o primeiro uso.
