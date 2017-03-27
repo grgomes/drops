@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2017-03-20T09:44:43-03:00
+date: 2017-03-27T09:44:43-03:00
 title: "Introdução ao Vuejs"
 author: calvingerling
 abstract: "Como é e quais as vantagens?"
