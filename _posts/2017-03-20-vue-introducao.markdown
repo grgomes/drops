@@ -6,16 +6,16 @@ author: calvingerling
 abstract: "Como é e quais as vantagens?"
 ---
 
-Hoje em dia é inevitável falar sobre desenvolvimento web sem mencionar as inúmeras libraries/frameworks JavaScript focadas em __MV*__, que facilitam o desenvolvimento. Criada em 2014 por Evan You, o [Vue](https://vuejs.org) é mais uma delas, que se destaca por sua flexibilidade e escalabilidade ao ser "um conjunto de ferramentas que trabalham muito bem juntas", ou seja, enquanto seu core foca somente na "exibição de dados" na tela, o conjunto pode ser complementado com "plugins" para novos comportamentos (e.g. requisições _http_ e rotas). Essa é uma abordagem diferente do Angular, que é um "monolito" com tudo e muito mais desde o primeiro uso.
+Hoje em dia, ao falar sobre desenvolvimento web, é inevitável mencionar as inúmeras libraries/frameworks JavaScript focadas em __MV*__, que facilitam o desenvolvimento. Criada em 2014 por Evan You, o [Vue](https://vuejs.org) é mais uma delas, que se destaca por sua flexibilidade e escalabilidade ao ser "um conjunto de ferramentas que trabalham muito bem juntas", ou seja, enquanto seu core foca somente na "exibição de dados" na tela, o conjunto pode ser complementado com "plugins" para novos comportamentos (e.g. requisições _http_ e rotas). Essa é uma abordagem diferente do Angular, que é um "monolito" com tudo e muito mais desde o primeiro uso.
 
-Apesar de não superar Angular ou React em popularidade, o uso da mesma vem crescendo entre os desenvolvedores. É possível ter uma noção disso a partir das stars no repositório oficial do mesmo. Abaixo, o comparativo do número de stars nos repositórios dos principais "concorrentes" desde as suas criações:
+Apesar de não superar o Angular ou o React em popularidade, o uso da mesma vem crescendo entre os desenvolvedores. É possível ter uma noção disso a partir das stars no repositório oficial do mesmo. Abaixo, o comparativo do número de stars nos repositórios dos principais "concorrentes" desde as suas criações:
 
 <center>
   <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-03-20-vue-introducao/github-stars.png" />
   <p>Imagem 1.1 - Angular: 55114, React: 62282 e Vue: 47282</p>
 </center>
 
-Mas não é só com stars que um framework se mantém atrativo. Para isso é preciso uma boa documentação que sirva tanto para aventureiros que estão recém começando quanto para os já familiarizados, uma comunidade engajada com o uso da ferramenta e showcases, como a página [News Feed](https://newsfeed.fb.com/) do Facebook, que por não possuir a necessidade de recursos avançados, usa somente o core da library para formar a mesma, a [migração do GitLab](https://about.gitlab.com/2016/10/20/why-we-chose-vue/) para Vue ou do Laravel que a partir da [versão 5.3](https://laravel-news.com/laravel-5-3-is-now-released) já vem com o Vue embutido.
+Mas não é só com stars que um framework se mantém atrativo. Para isso, é preciso uma boa documentação que sirva tanto para aventureiros que estão recém começando quanto para os já familiarizados, uma comunidade engajada com o uso da ferramenta e showcases, como a página [News Feed](https://newsfeed.fb.com/) do Facebook, que por não possuir a necessidade de recursos avançados, usa somente o core da library para formar a mesma, a [migração do GitLab](https://about.gitlab.com/2016/10/20/why-we-chose-vue/) para Vue ou do Laravel que a partir da [versão 5.3](https://laravel-news.com/laravel-5-3-is-now-released) já vem com o Vue embutido.
 
 ##Single-file component
 <center>
