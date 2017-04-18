@@ -43,13 +43,19 @@ Os arquivos com os testes devem ser estruturados a partir da pasta `test/`. Ser�
 
 - Cenários descritos em um único arquivo BDD
 
-![alt text](http://git.cwi.com.br/Fabrica-de-Testes/cwi-protractor-core/raw/master/resources/images/readme/1.PNG "Cenários são descritos em um único arquivo")
+<center>
+  <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-04-18-automacao-de-testes-e2e-angularjs/1.png" />
+</center>
 
 - Cenários descritos em um arquivo com a feature BDD e outro com a implementação
 
-![alt text](http://git.cwi.com.br/Fabrica-de-Testes/cwi-protractor-core/raw/master/resources/images/readme/2.PNG "Cenários são descritos em um arquivo com os testes e outro com a implementação")
+<center>
+  <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-04-18-automacao-de-testes-e2e-angularjs/2.png" />
+</center>
 
-![alt text](http://git.cwi.com.br/Fabrica-de-Testes/cwi-protractor-core/raw/master/resources/images/readme/3.PNG "Cenários são descritos em um arquivo com os testes e outro com a implementação")
+<center>
+  <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-04-18-automacao-de-testes-e2e-angularjs/3.png" />
+</center>
 
 #### Arquivo de Configuração
 
@@ -82,7 +88,7 @@ Para definir o navegador em que a aplicação será testada, bem como outros par
 O relatório gerado estará na pasta `./reports/` e será semalhante ao exemplo abaixo:
 
 <center>
-  <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-04-18-automacao-de-testes-e2e-angularjs/1.png" />
+  <img style="margin: 10px" src="{{ site.baseurl }}/content/2017-04-18-automacao-de-testes-e2e-angularjs/4.png" />
 </center>
 
 Este projeto foi desenvolvido para toda a comunidade interna da CWI. Então baixe, utilize e contribua para sua evolução.
